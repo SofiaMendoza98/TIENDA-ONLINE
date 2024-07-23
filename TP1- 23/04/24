@@ -1,0 +1,152 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/SofiaMendoza98/TIENDA-ONLINE/blob/main/TP1-%2023/04/24\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "i-eH5Rb80lAE",
+        "outputId": "861dc7a6-98f1-4e26-9140-70a63e09ccaa"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "lista ordenada [111, 95, 78, 65, 55, 45, 32, 9, 8, 8, 5, 2, 1, -5]\n",
+            "lista original [1, 5, 9, 8, 2, 65, 45, 78, 95, 32, 111, 55, 8, -5]\n"
+          ]
+        }
+      ],
+      "source": [
+        "list1 = [1,5,9,8,2,65,45,78,95,32,111,55,8,-5]\n",
+        "stop= True\n",
+        "list1_ord=[]\n",
+        "list_temp=list1.copy()\n",
+        "while stop:\n",
+        "  val_max=list_temp[0]\n",
+        "  for i in range(len(list_temp)):\n",
+        "     x=list_temp[i]\n",
+        "\n",
+        "     if (x>val_max):\n",
+        "       val_max=x\n",
+        "\n",
+        "  list1_ord.append(val_max)\n",
+        "  list_temp.remove(val_max)\n",
+        "  if len(list_temp)==0:\n",
+        "     stop= False\n",
+        "print(\"lista ordenada\",list1_ord)\n",
+        "print(\"lista original\",list1)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list2 = [51,18,89,65,4,2,3,5,96,85,74,14,25,36,32,65,98,87,45,12]\n",
+        "stop = True\n",
+        "list2_ord=[]\n",
+        "list_temp=list2.copy()\n",
+        "while stop:\n",
+        "  val_min=list_temp[0]\n",
+        "  for i in range(len(list_temp)):\n",
+        "     x=list_temp[i]\n",
+        "\n",
+        "     if (x<val_min):\n",
+        "       val_min=x\n",
+        "\n",
+        "  list2_ord.append(val_min)\n",
+        "  list_temp.remove(val_min)\n",
+        "  if len(list_temp)==0:\n",
+        "     stop= False\n",
+        "print(\"lista ordenada\",list2_ord)\n",
+        "print(\"lista original\",list2)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xIyLodxmqWWw",
+        "outputId": "3f59830c-9eb3-4eac-db43-acf3fca94f7d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "lista ordenada [2, 3, 4, 5, 12, 14, 18, 25, 32, 36, 45, 51, 65, 65, 74, 85, 87, 89, 96, 98]\n",
+            "lista original [51, 18, 89, 65, 4, 2, 3, 5, 96, 85, 74, 14, 25, 36, 32, 65, 98, 87, 45, 12]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list3 = [\"Bruno\",\"Joaquin\",\"Martin\",\"Gonzalo\",\"Franco\",\"Matias\",\"Quimy\",\"Marti\"]\n",
+        "stop = True\n",
+        "list3_ord=[]\n",
+        "list_temp=list3.copy()\n",
+        "while stop:\n",
+        "  val_alto=list_temp[0]\n",
+        "  for i in range(len(list_temp)):\n",
+        "     x=list_temp[i]\n",
+        "\n",
+        "     if (x<val_alto):\n",
+        "       val_alto=x\n",
+        "\n",
+        "  list3_ord.append(val_alto)\n",
+        "  list_temp.remove(val_alto)\n",
+        "  if len(list_temp)==0:\n",
+        "     stop= False\n",
+        "print(\"lista ordenada\",list3_ord)\n",
+        "print(\"lista original\",list3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LILfMngAsM1u",
+        "outputId": "ed97330f-3863-4f73-f566-9cc0b9dffda3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "lista ordenada ['Bruno', 'Franco', 'Gonzalo', 'Joaquin', 'Marti', 'Martin', 'Matias', 'Quimy']\n",
+            "lista original ['Bruno', 'Joaquin', 'Martin', 'Gonzalo', 'Franco', 'Matias', 'Quimy', 'Marti']\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
